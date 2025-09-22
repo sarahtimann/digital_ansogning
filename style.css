@@ -45,7 +45,7 @@ nav {
 .menu {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 .menu a {
