@@ -91,15 +91,24 @@ p {
 
 img {
   display: block;
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
+  margin-top: 2rem; /* Kun på mobil */
+  outline: 1px solid black;
+  box-shadow: 40px 30px 30px -20px black; /* kun højre side */
 }
 
 .intro {
   /* background-color: red; */
   min-height: 80vh;
   border-bottom: 0.2rem solid black;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 4rem;
 }
 
 .about-me {
@@ -121,7 +130,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .competence-item {
@@ -190,6 +199,10 @@ footer {
   margin: 0;
 }
 
+.footer-icon {
+  outline: none;
+}
+
 @media (min-width: 800px) {
   body {
     margin: 2rem 7rem 2rem 7rem;
@@ -237,6 +250,7 @@ footer {
 
   img {
     width: 70%;
+    margin-top: 0; /* Fjern margin-top på desktop */
   }
 
   p {
