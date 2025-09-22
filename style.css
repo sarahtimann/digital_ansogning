@@ -8,12 +8,14 @@ body[data-filter="light"] {
   background-color: white;
   color: black;
   margin: 2rem 3rem 2rem 3rem;
+  cursor: url("svg/cursor-dark.svg") 10 10, auto;
 }
 
 body[data-filter="dark"] {
   background-color: black;
   color: white;
   margin: 2rem 3rem 2rem 3rem;
+  cursor: url("svg/cursor-light.svg") 10 10, auto;
 }
 
 button {
