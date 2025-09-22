@@ -71,7 +71,7 @@ h3 {
   font-family: "Old Standard TT", serif;
   font-weight: normal;
   letter-spacing: 0.3rem;
-  font-size: clamp(28px, 4vw, 70px);
+  font-size: clamp(19px, 4vw, 70px);
   margin-bottom: 2rem;
 }
 
