@@ -56,14 +56,14 @@ nav {
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: clamp(65px, 10vw, 160px);
+  font-size: clamp(55px, 10vw, 160px);
   margin-top: 2rem;
 }
 
 h2 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: clamp(65px, 10vw, 160px);
+  font-size: clamp(55px, 10vw, 160px);
   margin-top: 2rem;
 }
 
@@ -106,20 +106,46 @@ img {
   /* background: green; */
   min-height: 80vh;
   border-bottom: 0.3rem solid black;
-  padding-bottom: 2rem;
+  padding-bottom: 10rem;
 }
 
 .competences {
   /* background: blue; */
   min-height: 80vh;
   border-bottom: 0.4rem solid black;
-  padding-bottom: 2rem;
+  padding-bottom: 10rem;
 }
 
-.grid_1-2 {
+/* Services Grid - Mobil først (1 kolonne) */
+.grid_1-3 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.competence-item {
+  text-align: left;
+}
+
+.competence-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+
+.competence-title {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.competence-description {
+  font-family: "Old Standard TT", serif;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .competences ul li {
@@ -197,6 +223,16 @@ footer {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Desktop version - 3 kolonner */
+  .grid_1-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .competence-item {
+    text-align: left;
   }
 
   img {
