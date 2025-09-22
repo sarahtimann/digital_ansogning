@@ -4,8 +4,27 @@
   box-sizing: border-box;
 }
 
-body {
+body[data-filter="light"] {
+  background-color: white;
+  color: black;
   margin: 2rem 3rem 2rem 3rem;
+}
+
+body[data-filter="dark"] {
+  background-color: black;
+  color: white;
+  margin: 2rem 3rem 2rem 3rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Old Standard TT", serif;
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+  border: 1px solid black;
+  padding: 0.3rem 0.3rem;
 }
 
 header {
@@ -28,7 +47,6 @@ nav {
 }
 
 .menu a {
-  color: black;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -36,14 +54,14 @@ nav {
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: clamp(65px, 10vw, 160px);
   margin-top: 2rem;
 }
 
 h2 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: clamp(65px, 10vw, 160px);
   margin-top: 2rem;
 }
 
@@ -51,7 +69,7 @@ h3 {
   font-family: "Old Standard TT", serif;
   font-weight: normal;
   letter-spacing: 0.3rem;
-  font-size: 1.7rem;
+  font-size: clamp(28px, 4vw, 70px);
   margin-bottom: 2rem;
 }
 
@@ -59,13 +77,14 @@ p {
   font-family: "Old Standard TT", serif;
   font-weight: normal;
   letter-spacing: 0.1rem;
+  font-size: 1rem;
 }
 
 img {
-  width: 100%;
+  display: block;
+  width: 90%;
   height: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 .intro {
@@ -78,37 +97,39 @@ img {
   /* background: green; */
   min-height: 80vh;
   border-bottom: 0.3rem solid black;
+  padding-bottom: 2rem;
 }
 
 .competences {
   /* background: blue; */
   min-height: 80vh;
   border-bottom: 0.4rem solid black;
+  padding-bottom: 2rem;
 }
 
-.grid_1-1 {
+.grid_1-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-ul li {
+.competences ul li {
   font-family: "Old Standard TT", serif;
   font-weight: normal;
   letter-spacing: 0.1rem;
   list-style: none; /* fjern standard bullet */
   position: relative; /* for at positionere pseudo-elementet relativt til li */
-  padding-left: 1.5rem; /* plads til linjen */
+  padding-left: 1rem; /* plads til linjen */
   margin-bottom: 1rem; /* afstand mellem punkterne */
 }
 
-ul li::before {
+.competences ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
-  width: 0.7rem; /* længden på linjen */
+  width: 0.5rem; /* længden på linjen */
   height: 1px; /* tykkelsen på linjen */
   background-color: black; /* linjens farve */
 }
@@ -116,4 +137,95 @@ ul li::before {
 .contact {
   /* background: yellow; */
   min-height: 80vh;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 2rem 7rem 2rem 7rem;
+  }
+
+  .menu {
+    gap: 5rem;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    width: 70%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .footer-menu {
+    gap: 3rem;
+  }
+}
+
+/* Light mode specifikke farver */
+body[data-filter="light"] .menu a {
+  color: black;
+}
+
+body[data-filter="light"] header {
+  border-bottom-color: black;
+}
+
+body[data-filter="light"] .intro,
+body[data-filter="light"] .about-me,
+body[data-filter="light"] .competences {
+  border-bottom-color: black;
+}
+
+body[data-filter="light"] .competences ul li::before {
+  background-color: black;
+}
+
+body[data-filter="light"] button {
+  border-color: black;
+  color: black;
+}
+
+/* Dark mode specifikke farver */
+body[data-filter="dark"] .menu a {
+  color: white;
+}
+
+body[data-filter="dark"] header {
+  border-bottom-color: white;
+}
+
+body[data-filter="dark"] .intro,
+body[data-filter="dark"] .about-me,
+body[data-filter="dark"] .competences {
+  border-bottom-color: white;
+}
+
+body[data-filter="dark"] .competences ul li::before {
+  background-color: white;
+}
+
+body[data-filter="dark"] button {
+  border-color: white;
+  color: white;
 }
