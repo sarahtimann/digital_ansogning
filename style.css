@@ -118,6 +118,23 @@ img {
   padding-bottom: 10rem;
 }
 
+.about-title {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-item {
+  margin-bottom: 3rem;
+}
+
+.about-description {
+  font-family: "Old Standard TT", serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 .competences {
   /* background: blue; */
   min-height: 80vh;
@@ -154,7 +171,7 @@ img {
 .competence-description {
   font-family: "Old Standard TT", serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .competences ul li {
