@@ -24,7 +24,7 @@ button {
   cursor: pointer;
   font-family: "Old Standard TT", serif;
   font-weight: normal;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   border: 1px solid black;
   padding: 0.3rem 0.3rem;
 }
@@ -45,7 +45,7 @@ nav {
 .menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .menu a {
