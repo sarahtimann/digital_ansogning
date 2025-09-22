@@ -12,7 +12,7 @@ body[data-filter="light"] {
 }
 
 body[data-filter="dark"] {
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(33, 33, 33);
   color: white;
   margin: 2rem 3rem 2rem 3rem;
   cursor: url("svg/cursor-light.svg") 10 10, auto;
@@ -89,14 +89,14 @@ p {
   font-size: 1rem;
 }
 
-img {
+#main-img {
   display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
   margin-top: 2rem; /* Kun på mobil */
   outline: 1px solid black;
-  box-shadow: 40px 30px 30px -20px black; /* kun højre side */
+  box-shadow: 40px 30px 30px -25px black; /* kun højre side */
 }
 
 .intro {
@@ -151,7 +151,9 @@ img {
 }
 
 .competence-item {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Tag fuld højde af grid-cellen */
 }
 
 .competence-number {
@@ -172,6 +174,17 @@ img {
   font-family: "Old Standard TT", serif;
   font-size: 1rem;
   line-height: 1.8;
+  padding-bottom: 1rem;
+  flex-grow: 1; /* Tag al tilgængelig plads */
+}
+
+.competence-button {
+  width: fit-content;
+}
+
+.competence-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .competences ul li {
@@ -217,7 +230,9 @@ footer {
 }
 
 .footer-icon {
-  outline: none;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 800px) {
@@ -265,7 +280,7 @@ footer {
     text-align: left;
   }
 
-  img {
+  #main-img {
     width: 70%;
     margin-top: 0; /* Fjern margin-top på desktop */
   }
@@ -325,4 +340,14 @@ body[data-filter="dark"] .competences ul li::before {
 body[data-filter="dark"] button {
   border-color: white;
   color: white;
+}
+
+body[data-filter="dark"] #main-img {
+  outline: 1px solid white;
+  box-shadow: 40px 30px 30px -25px white;
+}
+
+body[data-filter="dark"] .competence-button:hover {
+  background-color: white;
+  color: black;
 }
