@@ -5,14 +5,14 @@
 }
 
 body[data-filter="light"] {
-  background-color: white;
+  background-color: rgb(244, 244, 244);
   color: black;
   margin: 2rem 3rem 2rem 3rem;
   cursor: url("svg/cursor-dark.svg") 10 10, auto;
 }
 
 body[data-filter="dark"] {
-  background-color: black;
+  background-color: rgb(104, 104, 104);
   color: white;
   margin: 2rem 3rem 2rem 3rem;
   cursor: url("svg/cursor-light.svg") 10 10, auto;
@@ -73,6 +73,13 @@ h3 {
   letter-spacing: 0.3rem;
   font-size: clamp(28px, 4vw, 70px);
   margin-bottom: 2rem;
+}
+
+h4 {
+  font-family: "Old Standard TT", serif;
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+  font-size: clamp(20px, 2.5vw, 50px);
 }
 
 p {
@@ -162,8 +169,29 @@ footer {
     margin: 2rem 7rem 2rem 7rem;
   }
 
+  header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .menu {
     gap: 5rem;
+  }
+
+  .intro {
+    padding-left: 4rem;
+  }
+
+  .about-me {
+    padding-left: 4rem;
+  }
+
+  .competences {
+    padding-left: 4rem;
+  }
+
+  .contact {
+    padding-left: 4rem;
   }
 
   .grid_1-1 {
