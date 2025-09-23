@@ -478,11 +478,6 @@ body[data-filter="dark"] button {
   color: white;
 }
 
-body[data-filter="dark"] #main-img {
-  outline: 1px solid white;
-  box-shadow: 40px 30px 30px -25px white;
-}
-
 body[data-filter="dark"] .competence-button:hover {
   background-color: white;
   color: black;
