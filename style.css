@@ -137,6 +137,7 @@ p {
   /* background-color: orange; */
   min-height: 80vh;
   border-bottom: 0.4rem solid black;
+  padding-bottom: 10rem;
 }
 
 .cv-h2 {
