@@ -181,27 +181,27 @@ p {
 
 .competence-item .competence-image {
   position: absolute;
-  top: 0;
+  top: 20%;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
 }
 
 /* Hvert billede får sin egen skæve vinkel */
 .competence-item .competence-image:nth-child(4) {
   transform: rotate(-1.5deg); /* Første billede skævt til venstre */
-  left: -1%; /* Mere til venstre */
+  left: -2%; /* Mere til venstre */
 }
 
 .competence-item .competence-image:nth-child(5) {
   transform: rotate(-1deg); /* Andet billede skævt til højre */
-  left: -1%;
+  left: -2%;
 }
 
 .competence-item .competence-image:nth-child(6) {
   transform: rotate(-0.5deg); /* Tredje billede lidt skævt til venstre */
-  left: -1%;
+  left: -2%;
 }
 
 /* Alle billeder skjult som standard */
@@ -405,13 +405,30 @@ footer {
 
   /* Desktop version - 3 kolonner */
   .grid_1-3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
 
   .competence-item {
     text-align: left;
     /* max-width: 800px; */
+  }
+
+  .competence-item .competence-image {
+    width: 120%;
+    height: 120%;
+    top: 0;
+  }
+
+  .competence-item .competence-image:nth-child(4) {
+    left: -10%;
+  }
+  .competence-item .competence-image:nth-child(5) {
+    left: -10%;
+  }
+
+  .competence-item .competence-image:nth-child(6) {
+    left: -10%;
   }
 
   #main-img {
