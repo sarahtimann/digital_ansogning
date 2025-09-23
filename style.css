@@ -89,31 +89,12 @@ p {
   font-size: 1rem;
 }
 
-/* Wrapper til billede med firkant */
-.img-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
-
 #main-img {
   display: block;
   width: 100%;
   height: auto;
-  transform: rotate(-1deg);
+  transform: rotate(2deg);
   left: -1%;
-}
-
-/* Sort firkant du kan flytte rundt */
-.img-border {
-  position: absolute;
-  width: 350px; /* Bredde af firkant */
-  height: 525px; /* Højde af firkant */
-  border: 2px solid black;
-  top: -15px; /* Flyt op/ned */
-  left: -20px; /* Flyt venstre/højre */
-  pointer-events: none;
 }
 
 .intro {
@@ -190,17 +171,17 @@ p {
 
 /* Hvert billede får sin egen skæve vinkel */
 .competence-item .competence-image:nth-child(4) {
-  transform: rotate(-1.5deg); /* Første billede skævt til venstre */
+  transform: rotate(-3deg); /* Første billede skævt til venstre */
   left: -2%; /* Mere til venstre */
 }
 
 .competence-item .competence-image:nth-child(5) {
-  transform: rotate(-1deg); /* Andet billede skævt til højre */
+  transform: rotate(-0.5deg); /* Andet billede skævt til højre */
   left: -2%;
 }
 
 .competence-item .competence-image:nth-child(6) {
-  transform: rotate(-0.5deg); /* Tredje billede lidt skævt til venstre */
+  transform: rotate(4deg); /* Tredje billede lidt skævt til venstre */
   left: -2%;
 }
 
@@ -401,6 +382,10 @@ footer {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_1-1 .left {
+    padding-right: 4rem;
   }
 
   /* Desktop version - 3 kolonner */
