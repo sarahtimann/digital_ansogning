@@ -89,14 +89,31 @@ p {
   font-size: 1rem;
 }
 
+/* Wrapper til billede med firkant */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
 #main-img {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  margin-top: 2rem; /* Kun på mobil */
-  outline: 1px solid black;
-  box-shadow: 40px 30px 30px -25px black; /* kun højre side */
+  transform: rotate(-1deg);
+  left: -1%;
+}
+
+/* Sort firkant du kan flytte rundt */
+.img-border {
+  position: absolute;
+  width: 350px; /* Bredde af firkant */
+  height: 525px; /* Højde af firkant */
+  border: 2px solid black;
+  top: -15px; /* Flyt op/ned */
+  left: -20px; /* Flyt venstre/højre */
+  pointer-events: none;
 }
 
 .intro {
@@ -168,7 +185,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Hvert billede får sin egen skæve vinkel */
@@ -341,12 +358,16 @@ footer {
     gap: 4rem;
   }
 
+  #main-img {
+    width: 80%;
+    margin-top: 0; /* Fjern margin-top på tablet */
+  }
   /* .competence-item {
     max-width: 500px;
   } */
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   body {
     margin: 2rem 7rem 2rem 7rem;
   }
@@ -370,6 +391,7 @@ footer {
 
   .competences {
     padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .contact {
