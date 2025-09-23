@@ -383,6 +383,10 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
+
+  .cv-item {
+    max-width: 1000px;
+  }
 }
 @media (min-width: 900px) {
   .grid_1-1 {
