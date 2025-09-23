@@ -133,10 +133,55 @@ p {
   line-height: 1.8;
 }
 
+.cv-section {
+  /* background-color: orange; */
+  min-height: 80vh;
+  border-bottom: 0.4rem solid black;
+}
+
+.cv-h2 {
+  margin-bottom: 4rem;
+}
+
+.cv-item {
+  margin-bottom: 3rem;
+}
+
+span {
+  font-family: "Old Standard TT", serif;
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+  font-size: clamp(19px, 4vw, 70px);
+  margin-bottom: 2rem;
+}
+
+.cv-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.cv-title {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.cv-description {
+  font-family: "Old Standard TT", serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  padding-bottom: 1rem;
+}
+
 .competences {
   /* background: blue; */
   min-height: 80vh;
-  border-bottom: 0.4rem solid black;
+  border-bottom: 0.5rem solid black;
   padding-bottom: 10rem;
 }
 
@@ -376,6 +421,10 @@ footer {
     padding-left: 4rem;
   }
 
+  .cv-section {
+    padding-left: 4rem;
+  }
+
   .competences {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -457,7 +506,8 @@ body[data-filter="dark"] header {
 
 body[data-filter="dark"] .intro,
 body[data-filter="dark"] .about-me,
-body[data-filter="dark"] .competences {
+body[data-filter="dark"] .competences,
+body[data-filter="dark"] .cv-section {
   border-bottom-color: white;
 }
 
