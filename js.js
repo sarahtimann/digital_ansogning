@@ -1,5 +1,7 @@
 "use strict";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const storedTheme = localStorage.getItem("storedTheme");
 console.log("Stored theme: ", storedTheme);
 
@@ -45,3 +47,32 @@ if (themeToggle) {
     console.log("Theme changed to:", targetTheme); // Log det nye tema til konsollen
   });
 }
+
+let svg = document.getElementById("svg-line");
+let path = svg.querySelector("path");
+
+const pathLength = path.getTotalLength();
+
+console.log("Path length:", pathLength);
+
+gsap.set(path, {
+  strokeDasharray: pathLength,
+});
+
+gsap.fromTo(
+  path,
+  {
+    strokeDashoffset: pathLength,
+  },
+  {
+    strokeDashoffset: 0,
+    duration: 3,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#svg-line",
+      start: "top center",
+      end: "bottom bottom",
+      scrub: 1,
+    },
+  }
+);
