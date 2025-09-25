@@ -51,7 +51,13 @@ nav {
 .menu a {
   text-decoration: none;
   font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
+
+/* .menu a:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+} */
 
 h1 {
   font-family: "Oswald", sans-serif;
@@ -61,7 +67,14 @@ h1 {
 }
 
 #blik {
-  color: rgb(58, 58, 178);
+  color: rgb(122, 175, 177);
+}
+
+#skriv {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: clamp(55px, 10vw, 160px);
+  color: rgb(122, 175, 177);
 }
 
 h2 {
@@ -382,6 +395,11 @@ footer {
   height: auto;
 }
 
+.footer-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
 @media (min-width: 700px) {
   .grid_1-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -489,7 +507,7 @@ body[data-filter="light"] .menu a {
 }
 
 body[data-filter="light"] .menu a:hover {
-  color: rgb(58, 58, 178);
+  color: rgb(122, 175, 177);
 }
 
 body[data-filter="light"] header {
@@ -522,7 +540,7 @@ body[data-filter="dark"] .menu a {
 }
 
 body[data-filter="dark"] .menu a:hover {
-  color: rgb(58, 58, 178);
+  color: rgb(122, 175, 177);
 }
 
 body[data-filter="dark"] header {
