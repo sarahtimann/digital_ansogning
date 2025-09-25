@@ -52,11 +52,12 @@ nav {
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 0.1rem;
+  transition: transform 0.5s ease;
+  display: inline-block;
 }
 
 /* .menu a:hover {
   transform: scale(1.1);
-  transition: transform 0.5s ease;
 } */
 
 h1 {
@@ -524,7 +525,8 @@ body[data-filter="light"] .menu a {
 }
 
 body[data-filter="light"] .menu a:hover {
-  color: rgb(122, 175, 177);
+  color: black;
+  transform: scale(1.1);
 }
 
 body[data-filter="light"] header {
@@ -557,7 +559,8 @@ body[data-filter="dark"] .menu a {
 }
 
 body[data-filter="dark"] .menu a:hover {
-  color: rgb(122, 175, 177);
+  color: white;
+  transform: scale(1.1);
 }
 
 body[data-filter="dark"] header {
