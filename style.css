@@ -60,6 +60,10 @@ h1 {
   margin-top: 2rem;
 }
 
+#blik {
+  color: rgb(58, 58, 178);
+}
+
 h2 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
@@ -99,10 +103,9 @@ p {
 
 .intro {
   /* background-color: red; */
-  min-height: 80vh;
+  min-height: 60vh;
   border-bottom: 0.2rem solid black;
 }
-
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -390,6 +393,10 @@ footer {
   }
 }
 @media (min-width: 900px) {
+  .intro {
+    min-height: 80vh;
+  }
+
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -481,6 +488,10 @@ body[data-filter="light"] .menu a {
   color: black;
 }
 
+body[data-filter="light"] .menu a:hover {
+  color: rgb(58, 58, 178);
+}
+
 body[data-filter="light"] header {
   border-bottom-color: black;
 }
@@ -500,9 +511,18 @@ body[data-filter="light"] button {
   color: black;
 }
 
+body[data-filter="light"] button:hover {
+  background-color: black;
+  color: white;
+}
+
 /* Dark mode specifikke farver */
 body[data-filter="dark"] .menu a {
   color: white;
+}
+
+body[data-filter="dark"] .menu a:hover {
+  color: rgb(58, 58, 178);
 }
 
 body[data-filter="dark"] header {
@@ -525,7 +545,12 @@ body[data-filter="dark"] button {
   color: white;
 }
 
-body[data-filter="dark"] .competence-button:hover {
+body[data-filter="dark"] button:hover {
   background-color: white;
   color: black;
 }
+
+/* body[data-filter="dark"] .competence-button:hover {
+  background-color: white;
+  color: black;
+} */
