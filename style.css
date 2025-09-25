@@ -56,10 +56,6 @@ nav {
   display: inline-block;
 }
 
-/* .menu a:hover {
-  transform: scale(1.1);
-} */
-
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
@@ -102,6 +98,7 @@ p {
   height: auto;
   transform: rotate(2deg);
   left: -1%;
+  max-width: 400px;
 }
 
 .intro {
@@ -395,17 +392,11 @@ footer {
   transition: transform 0.5s ease;
 }
 
-@media (min-width: 700px) {
-  .grid_1-3 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+@media (min-width: 900px) {
+  body {
+    margin: 2rem 7rem 2rem 7rem;
   }
 
-  .cv-item {
-    max-width: 1000px;
-  }
-}
-@media (min-width: 900px) {
   .intro {
     min-height: 80vh;
   }
@@ -414,21 +405,28 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   #main-img {
-    width: 70%;
+    min-width: 400px;
+    max-width: 70%;
     margin-top: 0; /* Fjern margin-top på desktop */
   }
 
   .grid_1-1 .left {
     padding-right: 4rem;
   }
+
+  .grid_1-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .cv-item {
+    max-width: 900px;
+  }
 }
 
 @media (min-width: 1300px) {
-  body {
-    margin: 2rem 7rem 2rem 7rem;
-  }
-
   header {
     padding-left: 4rem;
     padding-right: 4rem;
