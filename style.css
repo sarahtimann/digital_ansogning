@@ -99,6 +99,7 @@ p {
   transform: rotate(2deg);
   left: -1%;
   max-width: 400px;
+  margin: 2rem auto 0 auto;
 }
 
 .intro {
@@ -365,6 +366,11 @@ span {
   min-height: 80vh;
 }
 
+.contact-ending {
+  margin-top: 2rem;
+  line-height: 1.8;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -450,7 +456,7 @@ footer {
 
   path {
     stroke: black;
-    stroke-width: 0.5;
+    stroke-width: 1;
     fill: none;
     stroke-dasharray: 1500; /* dækker hele path-længden */
     stroke-dashoffset: 1500; /* starter skjult */
@@ -478,6 +484,11 @@ footer {
 
   .contact {
     padding-left: 4rem;
+  }
+
+  .contact-ending {
+    max-width: 900px;
+    margin-top: 2rem;
   }
 
   /* Desktop version - 3 kolonner */
