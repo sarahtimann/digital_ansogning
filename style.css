@@ -66,17 +66,6 @@ h1 {
   margin-top: 2rem;
 }
 
-#blik {
-  color: rgb(122, 175, 177);
-}
-
-#skriv {
-  font-family: "Oswald", sans-serif;
-  font-weight: bold;
-  font-size: clamp(55px, 10vw, 160px);
-  color: rgb(122, 175, 177);
-}
-
 h2 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
@@ -116,9 +105,14 @@ p {
 
 .intro {
   /* background-color: red; */
-  min-height: 60vh;
+  min-height: 50vh;
   border-bottom: 0.2rem solid black;
 }
+
+#svg-line {
+  display: none;
+}
+
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -447,6 +441,29 @@ footer {
     padding-left: 4rem;
   }
 
+  #svg-line {
+    display: block;
+    position: absolute;
+    top: 57%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+  }
+
+  path {
+    stroke: black;
+    stroke-width: 0.5;
+    fill: none;
+    stroke-dasharray: 1500; /* dækker hele path-længden */
+    stroke-dashoffset: 1500; /* starter skjult */
+    animation: draw 5s ease-in-out forwards;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0; /* tegnes frem */
+    }
+  }
+
   .about-me {
     padding-left: 4rem;
   }
@@ -566,6 +583,10 @@ body[data-filter="dark"] button {
 body[data-filter="dark"] button:hover {
   background-color: white;
   color: black;
+}
+
+body[data-filter="dark"] path {
+  stroke: white;
 }
 
 /* body[data-filter="dark"] .competence-button:hover {
