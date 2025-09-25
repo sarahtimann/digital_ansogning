@@ -430,6 +430,10 @@ footer {
   .cv-item {
     max-width: 900px;
   }
+
+  .contact-ending {
+    max-width: 900px;
+  }
 }
 
 @media (min-width: 1300px) {
