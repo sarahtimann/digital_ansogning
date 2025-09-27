@@ -403,6 +403,10 @@ footer {
     margin: 2rem 7rem 2rem 7rem;
   }
 
+  .menu {
+    gap: 5rem;
+  }
+
   .intro {
     min-height: 80vh;
   }
@@ -440,10 +444,6 @@ footer {
   header {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .menu {
-    gap: 5rem;
   }
 
   .intro {
