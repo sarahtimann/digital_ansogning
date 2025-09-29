@@ -227,17 +227,17 @@ span {
 /* Hvert billede får sin egen skæve vinkel */
 .competence-item .competence-image:nth-child(4) {
   transform: rotate(-3deg); /* Første billede skævt til venstre */
-  left: -2%; /* Mere til venstre */
+  left: 2%; /* Mere til venstre */
 }
 
 .competence-item .competence-image:nth-child(5) {
   transform: rotate(-0.5deg); /* Andet billede skævt til højre */
-  left: -2%;
+  left: 2%;
 }
 
 .competence-item .competence-image:nth-child(6) {
   transform: rotate(4deg); /* Tredje billede lidt skævt til venstre */
-  left: -2%;
+  left: 2%;
 }
 
 /* Alle billeder skjult som standard */
@@ -507,20 +507,20 @@ footer {
   }
 
   .competence-item .competence-image {
-    width: 120%;
-    height: 120%;
+    /* width: 120%;
+    height: 120%; */
     top: 0;
   }
 
   .competence-item .competence-image:nth-child(4) {
-    left: -10%;
+    left: 2%;
   }
   .competence-item .competence-image:nth-child(5) {
-    left: -10%;
+    left: 2%;
   }
 
   .competence-item .competence-image:nth-child(6) {
-    left: -10%;
+    left: 2%;
   }
 
   p {
